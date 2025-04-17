@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Cap 1 - Um mapa do tesouro_dataModeler" id="AC0BCF66-5681-1954-EB49-4A681783F1C1" version="3.5">
+<createdBy>Jonathan</createdBy>
+<createdTime>2025-04-15 01:25:59 UTC</createdTime>
+<ownerDesignName>Cap 1 - Um mapa do tesouro_dataModeler</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>AC0BCF66-5681-1954-EB49-4A681783F1C1</designId>
+</OSDM_Design>
