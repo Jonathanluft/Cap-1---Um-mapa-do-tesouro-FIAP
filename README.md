@@ -1,38 +1,66 @@
-Nosso modelo de negócio consiste em um aplantação monitorada por 3 sensores que monitoram o solo diariamente. Esses sensores tiram diferentes medidas e análises durante o decorrer do dia e em seguida enviam para um servidor único. Neste servidor todas as informações são armazenadas e processadas e os dados são transferidos para a interface que faz a função de mostrar os resultados para o usuário final.
+# FIAP - Faculdade de Informática e Administração Paulista
 
-De começo, declaramos 3 entidades entituladas respectivamente como sensor_PH, sensor_NPK e sensor_umidade. Cada uma dessas entidades é dotadas dos seguintes atributos:
+<p align="center">
+<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+</p>
 
-- Sensor_PH: 
-    - cd_ph (chave primária) - INT
-    - cd_servidor (chave estrangeira) - INT
-    - ph_solo (1, n) - FLOAT
-    - data_ph (1, n) - DATE
-    - hora_ph (1, n) - TIME
+<br>
 
-- Sensor_NPK:
-    - cd_npk (chave primária) - INT
-    - cd_servidor (chave estrangeira) - INT
-    - fosforo (1, n) - FLOAT
-    - potassio (1, n) - FLOAT
-    - data_npk (1, n) - DATE
-    - hora_npk (1, n) - TIME
+# Nome do projeto
 
-- Sensor_umidade:
-    - cd_umidade (chave primária) - INT
-    - cd_servidor (chave estrangeira) - INT
-    - umidade_solo (1, n) - FLOAT
-    - umidade_ar (1, n) - FLOAT
-    - temperatura (1, n) - FLOAT
-    - data_umidade (1, n) - DATE
-    - hora_umidade (1, n) - TIME
+## Nome do grupo
 
-cada um desses 3 elementos tem uma relação (1, n) com o elemento servidor, relação essa em que o servidor pode ter acesso a mais de um sensor, mas um sensor só pode acessar um único servidor.
+## 👨‍🎓 Integrantes: 
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
 
-Dentro da entidade Servidor é armazenadas todos os atributos que os sensores armazenam e repassam através da relação. Além disso, como sua chave primária, tempos o atributo cd_servidor, que também é usado como chave estrangeira dentro dos sensores.
+## 👩‍🏫 Professores:
+### Tutor(a) 
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
+### Coordenador(a)
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
 
-Na sequência, temos a criação de outro elemento entitulado como interface, responsável por passar a informação final ao usuário.
-O elemento servidor e interface se interligam através da relação dados (1, 1). A entidade interface possui apenas 3 atributos, sendo eles:
 
-- cd_interface (chave primária) - INT
-- cd_servidor (chave estrangeira) - INT
-- resultados (0, n) - VARCHAR
+## 📜 Descrição
+
+*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+
+
+## 📁 Estrutura de pastas
+
+Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
+
+- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
+
+- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
+
+- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+
+- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+
+## 🔧 Como executar o código
+
+*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+
+
+## 🗃 Histórico de lançamentos
+
+* 0.5.0 - XX/XX/2024
+    * 
+* 0.4.0 - XX/XX/2024
+    * 
+* 0.3.0 - XX/XX/2024
+    * 
+* 0.2.0 - XX/XX/2024
+    * 
+* 0.1.0 - XX/XX/2024
+    *
+
+## 📋 Licença
+
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+
+
