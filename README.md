@@ -28,6 +28,49 @@ Cap 1 - Um mapa do tesouro
 
 ## 📜 Descrição
 
+Nosso modelo de negócio consiste em um sistema de 3 sensores que monitoram uma determinada plantação.
+Sendo assim, criamos 3 elementos, um para cada sensor, os intitulamos de acordo e estruturados seus atributos da seguinte forma:
+
+Sensor_ph:
+
+- cd_ph - int - (chave primaria)
+- cd_servidor - int (chave estrangeira)
+- ph_solo - float - (1, n)
+- data_ph - date - (1, n)
+- hora_ph - time - (1, n)
+
+Sensor_NPK:
+
+- cd_NPK - int - (chave primaria)
+- cd_servidor - int - (chave estrangeira)
+- fosforo - float - (1, n)
+- potássio - float - (1, n)
+- data_npk - date - (1, n)
+- hora_npk - time - (1, n)
+
+Sensor_Umidade:
+
+- cd_Umidade - int - (chave primária) 
+- cd_servidor - int - (chave secundária)
+- umidade solo - float - (1, n)
+- umidade ar - float - (1, n)
+- temperatura - float - (1, n)
+- data umidade - date - (1, n)
+- hora umidade - time - (1, n)
+
+
+Todos esses elementos possuem um relacionamento com o elemento servidor. Nomeado como recebimento de dados, esse relacionamento possui as cardinalidades (1, n) e (1, 1).
+
+
+O elemento servidor recebe como atributo, além de todos os dados contidos nos demais elementos, o dado cd_servidor, que é sua chave primária e utilizada como chave estrangeira nas outras entidades.
+
+Na sequência, as informações são processadas na entidade servidor e passadas a entidade interface através do relacionamento (1, 1) nomeado como dados.
+
+Por fim temos o elemento interface, que recebe os seguintes atributos:
+
+- cd_interface - int - (chave primária)
+- cd_servidor - int - (chave estrangeira)
+- resultados - varchar100 - (0, n)
 
 
 
