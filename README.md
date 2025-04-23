@@ -7,7 +7,7 @@
 <br>
 
 # Nome do projeto
-Cap 6 - Python e além
+Cap 1 - Um mapa do tesouro 
 
 ## Nome do grupo
 
